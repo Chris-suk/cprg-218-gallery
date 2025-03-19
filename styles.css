@@ -1,0 +1,244 @@
+
+/*USE CSS GRID!!!!*/
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0%;
+}
+/*Largest For devices greater than 1000px wide
+
+The navigation should be a pink bar that takes up 
+100% the width of the screen with the links centered inside the nav bar
+The photo gallery should be three columns
+The last image in the gallery (tiger) should span two columns*/
+@media screen and (min-width: 1000px) {
+    .header-container {
+        background-color: #120323;
+        color: #97bf04;
+        display: grid;
+        text-align: center;
+    }
+
+    nav {
+        background-color: #d9043d;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        display: grid;
+    }
+
+    nav ul {
+        list-style: none;
+        text-align: center; 
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    nav ul li {
+        display: grid;
+        place-items: center;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    main {
+        background-color: #cccccc;
+        margin: auto;
+    }
+
+    #gallery-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-auto-rows: auto;
+        gap: 20px;
+    }
+    
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding: 3%;
+    }
+
+    figure {
+        background-color: white;
+        padding: 5%;
+        place-items: center;
+        display: grid;
+    }
+
+    figure:last-child {
+        grid-column: span 2;
+    }
+
+    figure img {
+        border-bottom: #97bf04 solid 12px;
+        max-width: 100%;
+    }
+
+    footer {
+        text-align: center;
+        color: white;
+        padding: 5%;
+        background-color: #d9043d;
+    }
+}
+
+
+/*Medium The navigation should be a pink bar that takes up 100% 
+the width of the screen with the links centered inside the nav bar
+The photo gallery should be two columns
+The last image in the gallery (tiger) should span two columns*/
+@media screen and (min-width:769px) and (max-width: 999px) {
+
+    .header-container {
+        background-color: #120323;
+        color: #97bf04;
+        display: grid;
+        text-align: center;
+    }
+
+    nav {
+        background-color: #d9043d;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        display: grid;
+    }
+
+    nav ul {
+        list-style: none;
+        text-align: center; 
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    nav ul li {
+        display: grid;
+        place-items: center;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    main {
+        background-color: #cccccc;
+        margin: auto;
+    }
+
+    #gallery-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-auto-rows: auto;
+        gap: 20px;
+    }
+    
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding: 3%;
+    }
+
+    figure {
+        background-color: white;
+        padding: 5%;
+        place-items: center;
+        display: grid;
+    }
+
+    figure:last-child {
+        grid-column: span 2;
+    }
+
+    figure img {
+        border-bottom: #97bf04 solid 12px;
+        max-width: 100%;
+    }
+
+    footer {
+        text-align: center;
+        color: white;
+        padding: 5%;
+        background-color: #d9043d;
+    }
+}
+
+/* Smallest Less than 768px
+The buttons equal width and height, and take up
+95% of the screen width
+Buttons have border #97bf04
+Everything one column*/
+@media screen and (max-width: 768px) {
+
+    .header-container {
+        background-color: #120323;
+        color: #97bf04;
+        display: grid;
+        text-align: center;
+        padding: 20px;
+    }
+
+    ul {
+        list-style: none;
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    ul li {
+        border: #97bf04 solid 3px;
+    }
+
+    ul li a {
+        background-color: #d9043d;
+        text-decoration: none;
+        display: grid;
+        padding: 2%;
+        color: white;
+    }
+
+   main {
+    background-color: #cccccc;
+    margin: auto;
+   }
+  
+   #gallery-container {
+    justify-content: center;
+    display: grid;
+    margin: 0;
+   }
+
+   h2 {
+    text-align: center;
+    margin: 0;
+    padding: 3%;
+   }
+
+    figure {
+        background-color: white;
+        padding: 5%;
+        display: grid;
+        place-items: center;
+    }
+
+    figure img {
+        border-bottom: #97bf04 solid 12px;
+        max-width: 100%;
+    }
+
+   footer {
+        text-align: center;
+        color: white;
+        padding: 5%;
+        background-color: #d9043d;
+    }
+}
